@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #8f4f8f;
+    color: white;
+}
+.container {
+    margin: 25% auto;
+}
+
+.parent, .parent h2 {
+    padding: 5px;
+    border: solid 2px #c06fc0;
+    border-radius: 5px;
+}
+.parent {
+    width: 70%;
+    margin: 20px auto;
+    text-align: center;
+    font-family: system-ui;
+    background-color: purple;
+}
+
+.parent h2 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    background-color: #ad54ad;
+}
+
+.writeTask {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px auto;
+}
+input {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: solid 2px #ee91ee;
+    background-color: inherit;
+    color: white;
+    transition: 0.5s;
+}
+input:focus {
+    border-bottom: solid 2px #ff50ff;
+    transform: scale(1.03);
+}
+input::placeholder {
+    color: white;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+button {
+    text-transform: uppercase;
+    padding: 5px;
+    background-color: white;
+    color: purple;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    margin: 5px 0;
+}
+button:hover {
+    letter-spacing: 1.2px;
+}
+
+@media (max-width: 767px) {
+    .parent {
+        width: 100%;
+    }
+    .writeTask, .content {
+        flex-wrap: wrap;
+    }
+}
