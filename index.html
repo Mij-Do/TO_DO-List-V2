@@ -10,8 +10,12 @@
 </head>
 <body>
     <div class="container">
+        <div class="theme">
+            <button onclick="darkMode ()" id="darkTheme" type="button">Dark</button>
+            <button onclick="backToNormal ()" id="normal" type="button">Normal</button>
+        </div>
         <div class="parent" id="parent">
-            <h2>to-do list</h2>
+            <h2 id="header">to-do list</h2>
             <div class="writeTask">
                 <input type="text" name="writeTask" id="writeTask" placeholder="write Your Task">
                 <button id="addTask" type="button">Add Task</button>

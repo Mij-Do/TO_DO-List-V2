@@ -4,6 +4,9 @@ let writeTask = document.getElementById('writeTask');
 let addTask = document.getElementById('addTask');
 let showTasks = document.getElementById('showTasks');
 let task;
+// theme
+let darkTheme = document.getElementById('darkTheme');
+let normal = document.getElementById('normal');
 
 // add tasks to localstorage 
 if (localStorage.task != null) {
@@ -21,6 +24,7 @@ addTask.addEventListener('click', () => {
     task.push(data);
     localStorage.setItem('task', JSON.stringify(task));
 
+    writeTask.value = '';
     showData();
 });
 
@@ -62,3 +66,31 @@ function doneTask (id) {
     complateTask.classList.toggle('completed');
 }
 
+// themes
+normal.classList.add('hide');
+let puples = document.querySelectorAll('.puples');
+let header = document.getElementById('header');
+
+function darkMode () {
+    localStorage.setItem('bodyColor', '#333');
+    localStorage.setItem('parentColor', 'black');
+    localStorage.setItem('headerColor', 'gray');
+    normal.classList.remove('hide');
+    darkTheme.classList.add('hide');
+    if (localStorage.bodyColor) {
+        document.body.style.backgroundColor = localStorage.bodyColor;
+        parent.style.backgroundColor = localStorage.parentColor;
+        header.style.backgroundColor = localStorage.headerColor;
+    }
+}
+
+function backToNormal () {
+    localStorage.removeItem('bodyColor');
+    localStorage.removeItem('parentColor');
+    localStorage.removeItem('headerColor');
+    document.body.style.backgroundColor = '#8f4f8f';
+    parent.style.backgroundColor = 'purple';
+    header.style.backgroundColor = '#c06fc0';
+    darkTheme.classList.remove('hide');
+    normal.classList.add('hide');
+}

@@ -23,12 +23,15 @@ body {
     color: white;
 }
 .container {
-    /* margin: 15% auto; */
     position: relative;
     overflow: hidden;
     min-height: 100vh;
 }
-
+/* start theme */
+.theme {
+    text-align: center;
+}
+/* end theme */
 /* start parent */
 .parent, .parent h2 {
     padding: 5px;
@@ -269,4 +272,10 @@ button:hover {
     text-decoration: line-through; 
     color: gray;
     opacity: 0.6; 
+}
+
+/* hide */
+
+.hide {
+    display: none;
 }
