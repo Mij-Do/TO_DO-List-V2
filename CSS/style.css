@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+/* start scroll bar */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: purple;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #b414b4;
+}
+/* end scroll bar */
+
 body {
     background-color: #8f4f8f;
     color: white;
@@ -15,6 +29,7 @@ body {
     min-height: 100vh;
 }
 
+/* start parent */
 .parent, .parent h2 {
     padding: 5px;
     border: solid 2px #c06fc0;
@@ -58,7 +73,9 @@ input:focus {
 input::placeholder {
     color: white;
 }
+/* end parent */
 
+/* start content */
 .content .taskParent {
     display: flex;
     justify-content: space-between;
@@ -91,7 +108,9 @@ button:hover {
         flex-wrap: wrap;
     }
 }
+/* end content */
 
+/* start animation */
 .puples {
     border-radius: 50%;
     background-color: #c06fc0;
@@ -242,4 +261,12 @@ button:hover {
         100% { bottom: 300%; }
     }
 }
+/* end animation */
 
+
+/* complate */
+.completed {
+    text-decoration: line-through; 
+    color: gray;
+    opacity: 0.6; 
+}
