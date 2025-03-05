@@ -83,6 +83,7 @@ button:hover {
 @media (max-width: 767px) {
     .parent {
         width: 100%;
+        margin-top: 50%;
     }
     .writeTask, .content {
         flex-wrap: wrap;
@@ -99,7 +100,6 @@ button:hover {
     width: 40px;
     height: 40px;
     position: absolute;
-    bottom: -200%;
     right: 10%;
     animation: item1-move alternate infinite 1s;
 }
@@ -107,7 +107,6 @@ button:hover {
     width: 30px;
     height: 30px;
     position: absolute;
-    bottom: -200%;
     right: 20%;
     animation: item2-move alternate infinite 2s;
 }
@@ -115,7 +114,6 @@ button:hover {
     width: 25px;
     height: 25px;
     position: absolute;
-    bottom: -200%;
     right: 30%;
     animation: item3-move alternate infinite 1.5s;
 }
@@ -123,7 +121,6 @@ button:hover {
     width: 50px;
     height: 50px;
     position: absolute;
-    bottom: -200%;
     right: 45%;
     animation: item4-move alternate infinite 4s;
 }
@@ -131,7 +128,6 @@ button:hover {
     width: 20px;
     height: 20px;
     position: absolute;
-    bottom: -200%;
     right: 50%;
     animation: item5-move alternate infinite 0.5s;
 }
@@ -139,7 +135,6 @@ button:hover {
     width: 35px;
     height: 35px;
     position: absolute;
-    bottom: -200%;
     right: 60%;
     animation: item6-move alternate infinite 2s;
 }
@@ -147,7 +142,6 @@ button:hover {
     width: 55px;
     height: 55px;
     position: absolute;
-    bottom: -200%;
     right: 70%;
     animation: item7-move alternate infinite 5s;
 }
@@ -155,7 +149,6 @@ button:hover {
     width: 40px;
     height: 40px;
     position: absolute;
-    bottom: -200%;
     right: 80%;
     animation: item8-move alternate infinite 3s;
 }
@@ -163,7 +156,6 @@ button:hover {
     width: 30px;
     height: 30px;
     position: absolute;
-    bottom: -200%;
     right: 90%;
     animation: item9-move alternate infinite 2s;
 }
@@ -210,41 +202,41 @@ button:hover {
 
 @media (max-width: 767px) {
     @keyframes item1-move {
-        0% { bottom: -300%; }
+        0% { bottom: -500%; }
         100% { bottom: 200%; }
     }
     @keyframes item2-move {
-        0% { bottom: -300%; }
+        0% { bottom: -500%; }
         100% { bottom: 200%; }
     }
     @keyframes item3-move {
-        0% { bottom: -300%; }
+        0% { bottom: -500%; }
         100% { bottom: 200%; }
     }
     @keyframes item4-move {
-        0% { bottom: -300%; }
+        0% { bottom: -500%; }
         100% { bottom: 200%; }
     }
     @keyframes item5-move {
-        0% { bottom: -300%; }
+        0% { bottom: -500%; }
         100% { bottom: 200%; }
     }
     @keyframes item6-move {
-        0% { bottom: -300%; }
+        0% { bottom: -500%; }
         100% { bottom: 200%; }
     }
     @keyframes item7-move {
-        0% { bottom: -300%; }
+        0% { bottom: -500%; }
         100% { bottom: 200%; }
     }
     
     @keyframes item8-move {
-        0% { bottom: -300%; }
+        0% { bottom: -500%; }
         100% { bottom: 200%; }
     }
     
     @keyframes item9-move {
-        0% { bottom: -300%; }
+        0% { bottom: -500%; }
         100% { bottom: 200%; }
     }
 }
