@@ -75,12 +75,16 @@ function darkMode () {
     localStorage.setItem('bodyColor', '#333');
     localStorage.setItem('parentColor', 'black');
     localStorage.setItem('headerColor', 'gray');
+    localStorage.setItem('puplesColor', 'gray');
     normal.classList.remove('hide');
     darkTheme.classList.add('hide');
     if (localStorage.bodyColor) {
         document.body.style.backgroundColor = localStorage.bodyColor;
         parent.style.backgroundColor = localStorage.parentColor;
         header.style.backgroundColor = localStorage.headerColor;
+        puples.forEach(ele => {
+            ele.style.backgroundColor = localStorage.puplesColor;
+        });
     }
 }
 
@@ -88,9 +92,13 @@ function backToNormal () {
     localStorage.removeItem('bodyColor');
     localStorage.removeItem('parentColor');
     localStorage.removeItem('headerColor');
+    localStorage.removeItem('puplesColor');
     document.body.style.backgroundColor = '#8f4f8f';
     parent.style.backgroundColor = 'purple';
     header.style.backgroundColor = '#c06fc0';
+    puples.forEach(ele => {
+        ele.style.backgroundColor = '#c06fc0';
+    });
     darkTheme.classList.remove('hide');
     normal.classList.add('hide');
 }
