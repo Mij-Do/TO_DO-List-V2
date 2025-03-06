@@ -16,16 +16,20 @@ if (localStorage.task != null) {
 }
 
 addTask.addEventListener('click', () => {
-    let data = {
-        value: writeTask.value,
-        complate: false,
-    }
+    if (writeTask.value == '') {
+        event.preventDefault();
+    } else {
+        let data = {
+            value: writeTask.value,
+            complate: false,
+        }
+        
+        task.push(data);
+        localStorage.setItem('task', JSON.stringify(task));
     
-    task.push(data);
-    localStorage.setItem('task', JSON.stringify(task));
-
-    writeTask.value = '';
-    showData();
+        writeTask.value = '';
+        showData();
+    }
 });
 
 // showData 
@@ -61,7 +65,7 @@ function deleteTask (id) {
 
 function doneTask (id) {
     let complateTask = document.getElementById(`task${id}`);
-    task[id].complate = true;
+    task[id].complate = !task[id].complate;                             
     localStorage.setItem('task', JSON.stringify(task));
     complateTask.classList.toggle('completed');
 }
